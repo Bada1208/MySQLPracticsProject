@@ -1,11 +1,29 @@
-create database sqltasks;
 use sqltasks;
-create table if not exists Customers(Id int,Name varchar(255));
+Create table if not exists Person
+(
+    PersonId  int primary key auto_increment,
+    FirstName varchar(255),
+    LastName  varchar(255)
+);
+Create table if not exists Address
+(
+    AddressId int primary key auto_increment,
+    PersonId  int,
+    City      varchar(255),
+    State     varchar(255),
+    foreign key (PersonId) references Person (PersonId)
+);
+insert into Person (PersonId, LastName, FirstName)
+values (1, 'Wang', 'Allen'),
+       (2, 'Vasia', 'Vasev'),
+       (3, 'valera', 'Ivanov');
+insert into Address (AddressId, PersonId, City, State)
+values (1, 2, 'New York City', 'New York'),
+       (2, 1, 'Moscow', 'Moscowskaya'),
+       (3, 3, 'Kiev', 'Kievskaya');
+select Person.FirstName, Person.LastName, Address.City, Address.State
+from Person,
+     Address
+where Person.PersonId = Address.AddressId;
 
-create table if not exists Orders(Id int ,CustomerId int);
-drop table Orders;
-insert into Customers (Id, Name) values (1, 'Joe');
-insert into Customers (Id, Name) values (2, 'Henry');
-insert into Customers (Id, Name) values (3, 'Sam');
-insert into Customers (Id, Name) values (4, 'Max');
-insert into Orders (Id, CustomerId) values (1, 3),(2, 1);
+

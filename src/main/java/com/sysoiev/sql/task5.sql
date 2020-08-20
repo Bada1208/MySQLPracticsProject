@@ -20,8 +20,6 @@ values (1, 'Joe'),
 insert into Orders (Id, CustomerId)
 values (1, 3),
        (2, 1);
-drop table Customers;
-drop table Orders;
 SELECT Name
 FROM Customers
          LEFT JOIN Orders ON Customers.Id = Orders.CustomerId
