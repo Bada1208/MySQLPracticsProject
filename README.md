@@ -1,5 +1,5 @@
 # MySQLPracticsProject
-###Задание 1
+### Задание 1
 
 SCHEMA:
 
@@ -18,7 +18,7 @@ FirstName, LastName, City, State
 
 
 
-###Задание 2
+### Задание 2
 
 SCHEMA:
 Create table If Not Exists Employee (Id int, Salary int)
@@ -46,7 +46,7 @@ For example, given the above Employee table, the query should return 200 as the 
 
 
 
-###Задание 3
+### Задание 3
 
 SCHEMA:
 Create table If Not Exists Employee (Id int, Name varchar(255), Salary int, ManagerId int)
@@ -70,7 +70,7 @@ Given the Employee table, write a SQL query that finds out employees who earn mo
 +----------+
 | Joe      |
 +----------+
-###Задание 4
+### Задание 4
 
 SCHEMA:
 
@@ -99,7 +99,7 @@ For example, your query should return the following for the above table:
 Note: All emails are in lowercase.
 
 
-###Задание 5
+### Задание 5
 SCHEMA:
 Create table If Not Exists Customers (Id int, Name varchar(255))
 Create table If Not Exists Orders (Id int, CustomerId int)
@@ -157,7 +157,7 @@ Using the above tables as example, return the following:
 
 
 
-###Задание 6
+### Задание 6
 SCHEMA:
 
 Create table If Not Exists courses (student varchar(255), class varchar(255))
